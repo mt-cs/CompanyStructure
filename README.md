@@ -1,4 +1,4 @@
-Project 3 for edX Microsoft: DEV277x Object Oriented Programming in Java
+Project 3 edX Microsoft: DEV277x Object Oriented Programming in Java
 
 Company Structure
 
