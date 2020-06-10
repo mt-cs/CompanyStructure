@@ -5,8 +5,10 @@ public abstract class Employee {
     private int countID;
     Employee manager;
     String status;
-    int headcount;
-
+    int headCount;
+    double bonus;
+    double budget;
+    Accountant accountantSupport;
 
     /**
      * Should construct a new employee object and take in two parameters,
@@ -52,12 +54,17 @@ public abstract class Employee {
     }
 
     public void setManager(Employee manager){ this.manager=manager; }
+
+    public Accountant getAccountantSupport() {
+        return accountantSupport;
+    }
+
     /**
      * @param other another Employee
      * @return true if the two employee IDs are the same, false otherwise
      */
     public boolean equals(Employee other){
-        return this.getEmployeeID() == other.getEmployeeID();
+        return this.ID == other.ID;
     }
 
     /**
@@ -65,7 +72,7 @@ public abstract class Employee {
      * their id followed by their name.
      */
     public String toString(){
-        return getEmployeeID() + " " + getName();
+        return this.ID + " " + this.name;
     }
 
     /**

@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 
 public class TechnicalLead extends TechnicalEmployee{
-    public ArrayList<SoftwareEngineer> team = new ArrayList<>();
+    ArrayList<SoftwareEngineer> team = new ArrayList<>();
+
 
     /**
      * The TechnicalLead's base salary should be 1.3 times that of a TechnicalEmployee.
@@ -10,15 +11,15 @@ public class TechnicalLead extends TechnicalEmployee{
      */
     public TechnicalLead(String name){
         super(name);
-        this.baseSalary *= 1.3;
-        headcount=4;
+        baseSalary*=1.3;
+        headCount=4;
     }
 
     /**
      * Return true if the number of direct reports this manager has is less than their headcount.
      */
     public boolean hasHeadCount(){
-        if(team.size()<headcount){
+        if(team.size()<headCount){
             return true;
         } else { return false;}
     }
@@ -55,9 +56,14 @@ public class TechnicalLead extends TechnicalEmployee{
      * @param bonus
      * @return true/false
      */
-//    public boolean requestBonus(Employee e, double bonus){
-//
-//    }
+    public boolean requestBonus(Employee e, double bonus){
+        BusinessLead businessLead = (BusinessLead)accountantSupport.getManager();
+        if (businessLead.approveBonus(e,bonus)){
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     /**
      * return a String that gives insight into this Manager and all their direct reports.
@@ -74,5 +80,4 @@ public class TechnicalLead extends TechnicalEmployee{
         }
 
     }
-
 }

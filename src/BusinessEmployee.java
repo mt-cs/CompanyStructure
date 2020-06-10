@@ -1,16 +1,15 @@
 public class BusinessEmployee extends Employee{
-    int bonusBudget;
     /**
      * Has a default base salary of 50000
      * @param name Employee's name
      */
     public BusinessEmployee(String name){
-        super(name,50000);
-        bonusBudget=0;
+        super(name,50000.0);
+        budget=0;
     }
 
     public double getBonusBudget(){
-        return bonusBudget;
+        return budget;
     }
 
     /**
@@ -19,6 +18,6 @@ public class BusinessEmployee extends Employee{
      */
     @Override
     public String employeeStatus(){
-        return super.toString()+" with a budget of "+String.format("%.2f",bonusBudget);
+        return super.toString()+" with a budget of "+String.format("%.2f",budget);
     }
 }

@@ -1,21 +1,15 @@
-public class TechnicalEmployee extends Employee {
+public abstract class TechnicalEmployee extends Employee {
     int checkIn;
     /**
      * Has a default base salary of 75000
      * @param name Employee's name
      */
     public TechnicalEmployee(String name){
-        super(name,75000);
-        checkIn=0;
+        super(name,75000.0);
     }
 
     @Override
     public String employeeStatus(){
-        return super.toString()+" has "+checkIn+" successful check ins";
+        return super.toString()+" has "+checkIn+" successful check ins\n";
     }
-
-    private void setCheckIn(){
-        checkIn++;
-    }
-
 }

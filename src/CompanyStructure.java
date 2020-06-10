@@ -19,12 +19,17 @@ public class CompanyStructure {
         VPofENG.addReport(seF);
         VPofENG.addReport(seG);
         System.out.println(VPofENG.getTeamStatus());
-//
-//        BusinessLead CFO = new BusinessLead("Amy Hood");
-//        Accountant actA = new Accountant("Niky");
-//        Accountant actB = new Accountant("Andrew");
-//        CFO.addReport(actA, CTO);
-//        CFO.addReport(actB, VPofENG);
-//        System.out.println(CFO.getTeamStatus());
+
+        BusinessLead CFO = new BusinessLead("Amy Hood");
+        Accountant actA = new Accountant("Niky");
+        Accountant actB = new Accountant("Andrew");
+        CFO.addReport(actA, CTO);
+        CFO.addReport(actB, VPofENG);
+        System.out.println(CFO.getTeamStatus());
+
+        System.out.println(seB.toString() + "'s manager is " + seB.getManager().toString());
+        System.out.println(seF.toString() + "'s manager is " + seF.getManager().toString());
+        System.out.println(actB.toString() + "'s manager is " + actB.getManager().toString());
+        System.out.println();
     }
 }
